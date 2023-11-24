@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use App\Models\User;
+use Carbon\Carbon;
+use Session;
+
 
 class UserController extends Controller
 {
@@ -12,11 +17,12 @@ class UserController extends Controller
     }
 
     public function index(){
-        return view('admin.user.all');
+        $allUser = User::orderBy('id','DESC')->get();
+        return view('admin.user.all', compact('allUser'));
     }
 
     public function add(){
-        
+        return view('admin.user.add');
     }
 
     public function edit(){

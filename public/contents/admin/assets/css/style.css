@@ -26,3 +26,20 @@ a{
     text-transform: uppercase;
     font-size: 14px;
 }
+
+.card_header{
+    background-color: rgb(236, 243, 246);
+}
+
+.col_form_label{
+    text-align: right;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: -4px;
+    color: #000;
+    padding-right: 0px;
+}
+
+span.req_star{
+    color: #E74C3C;
+}

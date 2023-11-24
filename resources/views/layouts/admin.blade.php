@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="{{asset('contents/admin')}}/assests/css/vendor/jquery-jvectormap-1.2.2.css"/>
         <link rel="stylesheet" href="{{asset('contents/admin')}}/assets/css/icons.min.css"/>
         <link rel="stylesheet" href="{{asset('contents/admin')}}/assets/css/app.min.css"/>
+        <link rel="stylesheet" href="{{asset('contents/admin')}}/assets/css/vendor/dataTables.bootstrap5.css"/>
+        <link rel="stylesheet" rel="stylesheet" href="{{asset('contents/admin')}}/assets/css/vendor/responsive.bootstrap5.css"/>
         <link rel="stylesheet" href="{{asset('contents/admin')}}/assets/css/style.css"/>
 
     </head>
@@ -49,7 +51,7 @@
 
                         <li class="side-nav-item">
                             <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail" class="side-nav-link">
-                                <i class="uil-home-alt"></i>
+                                <i class="uil-users-alt"></i>
                                 <span> User </span>
                                 <span class="menu-arrow"></span>
                             </a>
@@ -254,6 +256,10 @@
         <script src="{{asset('contents/admin')}}/assets/js/vendor/jquery-jvectormap-1.2.2.min.js"></script>
         <script src="{{asset('contents/admin')}}/assets/js/vendor/jquery-jvectormap-world-mill-en.js"></script>
         <script src="{{asset('contents/admin')}}/assets/js/pages/demo.dashboard.js"></script>
+        <script src="{{asset('contents/admin')}}/assets/js/vendor/jquery.dataTables.min.js"></script>
+        <script src="{{asset('contents/admin')}}/assets/js/vendor/dataTables.bootstrap5.js"></script>
+        <script src="{{asset('contents/admin')}}/assets/js/vendor/dataTables.responsive.min.js"></script>
+        <script src="{{asset('contents/admin')}}/assets/js/vendor/responsive.bootstrap5.min.js"></script>
         <script src="{{asset('contents/admin')}}/assets/js/custom.js"></script>
     </body>
 </html>
