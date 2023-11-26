@@ -29,8 +29,9 @@ class UserController extends Controller
         
     }
 
-    public function view(){
-        
+    public function view($id){
+        $data = User::orderBy('id','ASC')->firstOrFail();
+        return view('admin.user.view',compact('data'));
     }
 
     public function insert(){

@@ -6,9 +6,9 @@
         <div class="card">
             <div class="card-header card_header">
                 <div class="row">
-                    <div class="col-md-8"><h4>All User Information</h4></div>
+                    <div class="col-md-8"><h4>User Information</h4></div>
                     <div class="col-md-4 card_button">
-                        <a href="{{ url('dashboard/user/add') }}" class="btn btn-md btn-dark"><i class="mdi mdi-plus-circle me-1"> Add User</i></a>
+                        <a href="{{ url('dashboard/user/add') }}" class="btn btn-md btn-dark"><i class="mdi mdi-plus-circle me-1"> All User</i></a>
                     </div>
                 </div>
 
@@ -29,15 +29,15 @@
                     @foreach($allUser as $data)
                         <tr>
                             <td>{{ $data-> name }}</td>
-                            <td>---</td>
+                            <td>{{ $data-> phone }}</td>
                             <td>{{ $data-> email }}</td>
-                            <td>---</td>
-                            <td>---</td>
+                            <td>{{ $data-> role }}</td>
+                            <td>{{ $data-> image }}</td>
                             <td>
                                 <!-- Info -->
                                 <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage</button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">View</a>
+                                        <a class="dropdown-item" href="{{url('dashboard/user/view/'.$data->id)}}">View</a>
                                         <a class="dropdown-item" href="#">Edit</a>
                                         <a class="dropdown-item" href="#">delete</a>
                                     </div>
