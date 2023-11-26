@@ -6,12 +6,11 @@
         <div class="card">
             <div class="card-header card_header">
                 <div class="row">
-                    <div class="col-md-8"><h4>All User Information</h4></div>
+                    <div class="col-md-8"><h4>View Category Information</h4></div>
                     <div class="col-md-4 card_button">
-                        <a href="{{ url('dashboard/user/add') }}" class="btn btn-md btn-dark"><i class="mdi mdi-plus-circle me-1"> Add User</i></a>
+                        <a href="{{ url('dashboard/income/category') }}" class="btn btn-md btn-dark"><i class="mdi mdi-plus-circle me-1"> All Category</i></a>
                     </div>
                 </div>
-
             </div>
             <div class="card-body card_body">
                 <div class="row">
@@ -19,24 +18,29 @@
                   <div class="col-8">
                     <table class="table table-bordered table-striped table-hover custom_view_table">
                       <tr>
-                        <td>Name</td>
+                        <td>Category Name</td>
                         <td>:</td>
-                        <td>{{ $data->name }}</td>
+                        <td>{{ $data->incate_name }}</td>
                       </tr>
                       <tr>
-                        <td>Phone</td>
+                        <td>Category Remarks</td>
                         <td>:</td>
-                        <td>01710726035</td>
+                        <td>{{ $data->incate_remarks }}</td>
                       </tr>
                       <tr>
-                        <td>Email</td>
+                        <td>Category Creator</td>
                         <td>:</td>
-                        <td>{{ $data->email }}</td>
+                        <td>{{ $data->incate_creator }}</td>
                       </tr>
                       <tr>
-                        <td>Role</td>
+                        <td>Category Editor</td>
                         <td>:</td>
-                        <td>Superadmin</td>
+                        <td>{{ $data->incate_editor }}</td>
+                      </tr>
+                      <tr>
+                        <td>Slug</td>
+                        <td>:</td>
+                        <td>{{ $data->incate_slug }}</td>
                       </tr>
                     </table>
                   </div>

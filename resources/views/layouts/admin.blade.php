@@ -70,6 +70,23 @@
                             </div>
                         </li>
                         <li class="side-nav-item">
+                            <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail" class="side-nav-link">
+                                <i class="uil-users-alt"></i>
+                                <span> Income </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarEmail">
+                                <ul class="side-nav-second-level">
+                                    <li>
+                                        <a href="{{url('dashboard/income/category')}}">Income Category</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{url('dashboard/income/category/add')}}">Add Income</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="side-nav-item">
                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="side-nav-link">
                                 <i class="uil-exit"></i>
                                 <span> Logout </span>

@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\IncomeCategoryController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +36,18 @@ Route::post('dashboard/user/update', [UserController::class, 'update']);
 Route::post('dashboard/user/softdelete', [UserController::class, 'softdelete']);
 Route::post('dashboard/user/restore', [UserController::class, 'restore']);
 Route::post('dashboared/user/delete', [UserController::class, 'delete']);
+
+
+
+Route::get('dashboard/income/category', [IncomeCategoryController::class, 'index']);
+Route::get('dashboard/income/category/add', [IncomeCategoryController::class, 'add']);
+Route::get('dashboard/income/category/edit', [IncomeCategoryController::class, 'edit']);
+Route::get('dashboard/income/category/view/{slug}', [IncomeCategoryController::class, 'view']);
+Route::post('dashboard/income/category/insert', [IncomeCategoryController::class, 'insert']);
+Route::post('dashboard/income/category/update', [IncomeCategoryController::class, 'update']);
+Route::post('dashboard/income/category/softdelete', [IncomeCategoryController::class, 'softdelete']);
+Route::get('dashboard/income/category/restore', [IncomeCategoryController::class, 'restore']);
+Route::get('dashboard/income/category/delete', [IncomeCategoryController::class, 'delete']);
 
 
 
