@@ -3,7 +3,8 @@
 
 <div class="row">
     <div class="col-12">
-        <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="">
+        <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="{{url('dashboard/income/category/submit')}}">
+            @csrf
             <div class="card">
                 <div class="card-header card_header">
                     <div class="row">
