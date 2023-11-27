@@ -50,39 +50,43 @@
 
 
                         <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail" class="side-nav-link">
-                                <i class="uil-users-alt"></i>
-                                <span> User </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarEmail">
+                            <a data-bs-toggle="collapse" href="#userTables" aria-expanded="false" aria-controls="userTables" class="side-nav-link"><i class="uil-table"></i><span> Users </span><span class="menu-arrow"></span></a>
+                            <div class="collapse" id="userTables">
                                 <ul class="side-nav-second-level">
-                                    <li>
-                                        <a href="{{ url('dashboard/user') }}">All Users</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ url('dashboard/user/add') }}">Add User</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">All Role</a>
-                                    </li>
+                                    <li><a href="{{url('dashboard/user')}}">All User</a></li>
+                                    <li><a href="{{url('dashboard/user/add')}}">Add User</a></li>
+                                    <li><a href="#">All Role</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail" class="side-nav-link">
+                            <a data-bs-toggle="collapse" href="#incomeTables" aria-expanded="false" aria-controls="incomeTables" class="side-nav-link">
                                 <i class="uil-users-alt"></i>
                                 <span> Income </span>
                                 <span class="menu-arrow"></span>
                             </a>
-                            <div class="collapse" id="sidebarEmail">
+                            <div class="collapse" id="incomeTables">
                                 <ul class="side-nav-second-level">
+                                    <li>
+                                        <a href="{{url('dashboard/income')}}">All Income</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{url('dashboard/income/add')}}">Add Income</a>
+                                    </li>
                                     <li>
                                         <a href="{{url('dashboard/income/category')}}">Income Category</a>
                                     </li>
-                                    <li>
-                                        <a href="{{url('dashboard/income/category/add')}}">Add Income</a>
-                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        <li class="side-nav-item">
+                            <a data-bs-toggle="collapse" href="#expenseTables" aria-expanded="false" aria-controls="expenseTables" class="side-nav-link"><i class="uil-table"></i><span> Expense </span><span class="menu-arrow"></span></a>
+                            <div class="collapse" id="expenseTables">
+                                <ul class="side-nav-second-level">
+                                    <li><a href="{{url('dashboard/expense')}}">All Expense</a></li>
+                                    <li><a href="{{url('dashboard/expense/add')}}">Add Expense</a></li>
+                                    <li><a href="{{url('dashboard/expense/category')}}">Expense Category</a></li>
                                 </ul>
                             </div>
                         </li>

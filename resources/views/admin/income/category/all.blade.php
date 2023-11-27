@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-md-8"><h4>User Information</h4></div>
                     <div class="col-md-4 card_button">
-                        <a href="{{ url('dashboard/user/add') }}" class="btn btn-md btn-dark"><i class="mdi mdi-plus-circle me-1"> All User</i></a>
+                        <a href="{{ url('dashboard/income/category/add') }}" class="btn btn-md btn-dark"><i class="mdi mdi-plus-circle me-1"> All User</i></a>
                     </div>
                 </div>
 

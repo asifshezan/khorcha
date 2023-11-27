@@ -30,7 +30,7 @@
                       <tr>
                         <td>Category Creator</td>
                         <td>:</td>
-                        <td>{{ $data->incate_creator }}</td>
+                        <td>{{ $data->creatorInfo->name }}</td>
                       </tr>
                       <tr>
                         <td>Category Editor</td>
@@ -42,6 +42,10 @@
                         <td>:</td>
                         <td>{{ $data->incate_slug }}</td>
                       </tr>
+                      <td>Time</td>
+                      <td>:</td>
+                      <td>{{ $data->created_at->format('d-m-Y | h:i:s a') }}</td>
+                    </tr>
                     </table>
                   </div>
                   <div class="col-2"></div>
