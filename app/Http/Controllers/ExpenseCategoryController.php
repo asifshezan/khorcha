@@ -17,11 +17,11 @@ class ExpenseCategoryController extends Controller
 
     public function index(){
         $allexp = ExpenseCategory::where('expcate_status', 1)->orderBy('expcate_id', 'DESC')->get();
-        return view('dashboard.expense.category', compact('allexp'));
+        return view('admin.expense.category.all', compact('allexp'));
     }
 
     public function add(){
-        return view('dashboard.expense.category.add');
+        return view('admin.expense.category.add');
     }
     
     public function edit(){
@@ -32,7 +32,23 @@ class ExpenseCategoryController extends Controller
         
     }
 
-    public function insert(){
+    public function insert(Request $request){
+        $slug = Str::slug($request['exp_name'], '-');
+        $creator = Auth::user()->id;
+        $insert = ExpenseCategory::insert([
+            'expcate_name' => $request['exp_name'],
+            'expcate_remarks' => $request['exp_remarks'],
+            'expcate_creator' => $creator,
+            'expcate_slug' => $slug,
+            'expcate_status' => 1,
+            'created_at' => Carbon::now()->toDateTimeString()
+        ]);
+
+        if($insert){
+            return redirect('dashboard/expense/category');
+        }else{
+            return redirect('dashboard/expense/category/adll');
+        }
         
     }
 

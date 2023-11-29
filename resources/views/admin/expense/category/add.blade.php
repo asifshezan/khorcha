@@ -19,14 +19,14 @@
                     <div class="row mb-3">
                         <label class="col-3 col-form-label col_form_label">Expense Category Name<span class="req_star">*</span>:</label>
                         <div class="col-7">
-                            <input type="text" class="form-control" name="cat_name" placeholder="enter category name">
+                            <input type="text" class="form-control" name="exp_name" placeholder="enter category name">
                         </div>
                     </div> 
                     
                     <div class="row mb-3">
                         <label class="col-3 col-form-label col_form_label">Expense Category Remarks<span class="req_star">*</span>:</label>
                         <div class="col-7">
-                            <input type="text" class="form-control" name="cat_remarks" placeholder="enter category remarks">
+                            <input type="text" class="form-control" name="exp_remarks" placeholder="enter category remarks">
                         </div>
                     </div>                          
                 </div> <!-- end card body-->

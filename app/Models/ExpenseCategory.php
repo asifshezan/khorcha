@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class ExpenseCategory extends Model
 {
     use HasFactory;
+
+
+    public function creatorInfo(){
+        return $this->belongsTo('App\Models\User', 'expcate_id', 'id');
+    }
 }
