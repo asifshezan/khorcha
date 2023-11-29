@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\IncomeCategoryController;
+use App\Http\Controllers\ExpenseCategoryController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -38,7 +39,6 @@ Route::post('dashboard/user/restore', [UserController::class, 'restore']);
 Route::post('dashboared/user/delete', [UserController::class, 'delete']);
 
 
-
 Route::get('dashboard/income/category', [IncomeCategoryController::class, 'index']);
 Route::get('dashboard/income/category/add', [IncomeCategoryController::class, 'add']);
 Route::get('dashboard/income/category/edit', [IncomeCategoryController::class, 'edit']);
@@ -50,6 +50,14 @@ Route::get('dashboard/income/category/restore', [IncomeCategoryController::class
 Route::get('dashboard/income/category/delete', [IncomeCategoryController::class, 'delete']);
 
 
+Route::get('dashboard/expense/category', [ExpenseCategoryController::class, 'index']);
+Route::get('dashboard/expense/category/add', [ExpenseCategoryController::class, 'add']);
+Route::get('dashboard/expense/category/edit', [ExpenseCategoryController::class, 'edit']);
+Route::get('dashboard/expense/category/view/{slug}', [ExpenseCategoryController::class, 'view']);
+Route::post('dashboard/expense/category/submit', [ExpenseCategoryController::class, 'insert']);
+Route::post('dashboard/expense/category/update', [ExpenseCategoryController::class, 'update']);
+Route::post('dashboard/expense/category/softdelete', [ExpenseCategoryController::class, 'softdelete']);
+Route::post('dashboard/expense/category/delete', [ExpenseCategoryController::class, 'delete']);
 
 
 

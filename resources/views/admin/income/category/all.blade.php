@@ -30,7 +30,7 @@
                         <tr>
                             <td>{{ $data-> incate_name }}</td>
                             <td>{{ $data-> incate_remarks }}</td>
-                            <td>{{ $data-> incate_creator }}</td>
+                            <td>{{ $data-> creatorInfo-> name }}</td>
                             <td>{{ $data-> incate_editor }}</td>
                             <td>{{ $data-> incate_slug }}</td>
                             <td>
