@@ -54,10 +54,10 @@ class IncomeCategoryController extends Controller
         ]);
 
         if($insert){
-            Session::flash('success','value');
+            Session::flash('success','Successfully add income category.');
             return redirect('dashboard/income/category/add');
         }else{
-            Session::flash('error','value');
+            Session::flash('error','Opss! Sorry, try again.');
             return redirect('dashboard/income/category/add');
         }
     }
@@ -83,10 +83,10 @@ class IncomeCategoryController extends Controller
         ]);
 
         if($update){
-            Session::flash('success','value');
+            Session::flash('success','Successfully update your income category.');
             return redirect('dashboard/income/category/view/'.$slug);
         }else{
-            Session::flash('error','value');
+            Session::flash('error','Opss! Sorry,try again.');
             return redirect('dashboard/income/category/edit/'.$slug);
         }
         

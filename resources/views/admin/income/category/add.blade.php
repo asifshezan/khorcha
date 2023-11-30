@@ -21,12 +21,12 @@
                         <div class="col-md-8">
                             @if (Session::has('success'))
                             <div class="alert alert-success" role="alert">
-                                <b>Successfully create income category.</b>
+                                {{Session::get('success')}}
                               </div> 
                             @endif
                             @if (Session::has('error'))
                             <div class="alert alert-danger" role="alert">
-                                A simple success alert—check it out!
+                                {{Session::get('error')}}
                               </div>
                             @endif
                         </div>

@@ -16,6 +16,22 @@
 
                 </div>
                 <div class="card-body card_body">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            @if (Session::has('success'))
+                            <div class="alert alert-success" role="alert">
+                                {{Session::get('success')}}
+                              </div>
+                            @endif
+                            @if (Session::has('error'))
+                            <div class="alert alert-danger" role="alert">
+                                {{Session::get('error')}}
+                              </div>
+                            @endif
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
                     <div class="row mb-3">
                         <label class="col-3 col-form-label col_form_label">Income Category Name<span class="req_star">*</span>:</label>
                         <div class="col-7">
