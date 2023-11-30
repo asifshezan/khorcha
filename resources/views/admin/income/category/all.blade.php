@@ -38,7 +38,7 @@
                                 <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage</button>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="{{url('dashboard/income/category/view/'.$data->incate_slug)}}">View</a>
-                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="{{url('dashboard/income/category/edit/'.$data->incate_slug)}}">Edit</a>
                                         <a class="dropdown-item" href="#">delete</a>
                                     </div>
                             </td>

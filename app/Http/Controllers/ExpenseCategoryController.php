@@ -28,8 +28,9 @@ class ExpenseCategoryController extends Controller
         
     }
 
-    public function view(){
-        
+    public function view($slug){
+        $data = ExpenseCategory::where('expcate_status',1)->where('expcate_slug',$slug)->firstOrFail();
+        return view('admin.expense.category.view', compact('data'));
     }
 
     public function insert(Request $request){
@@ -47,7 +48,7 @@ class ExpenseCategoryController extends Controller
         if($insert){
             return redirect('dashboard/expense/category');
         }else{
-            return redirect('dashboard/expense/category/adll');
+            return redirect('dashboard/expense/category/all');
         }
         
     }

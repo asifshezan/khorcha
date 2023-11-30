@@ -6,9 +6,9 @@
         <div class="card">
             <div class="card-header card_header">
                 <div class="row">
-                    <div class="col-md-8"><h4>View Category Information</h4></div>
+                    <div class="col-md-8"><h4>View Expense Category Information</h4></div>
                     <div class="col-md-4 card_button">
-                        <a href="{{ url('dashboard/income/category') }}" class="btn btn-md btn-dark"><i class="mdi mdi-plus-circle me-1"> All Category</i></a>
+                        <a href="{{ url('dashboard/expense/category') }}" class="btn btn-md btn-dark"><i class="mdi mdi-plus-circle me-1"> All Expense Category</i></a>
                     </div>
                 </div>
             </div>
@@ -18,29 +18,29 @@
                   <div class="col-8">
                     <table class="table table-bordered table-striped table-hover custom_view_table">
                       <tr>
-                        <td>Category Name</td>
+                        <td>Expense Category Name</td>
                         <td>:</td>
-                        <td>{{ $data->incate_name }}</td>
+                        <td>{{ $data->expcate_name }}</td>
                       </tr>
                       <tr>
-                        <td>Category Remarks</td>
+                        <td>Expense Category Remarks</td>
                         <td>:</td>
-                        <td>{{ $data->incate_remarks }}</td>
+                        <td>{{ $data->expcate_remarks }}</td>
                       </tr>
                       <tr>
-                        <td>Category Creator</td>
+                        <td>Expense Category Creator</td>
                         <td>:</td>
                         <td>{{ $data->creatorInfo->name }}</td>
                       </tr>
                       <tr>
-                        <td>Category Editor</td>
+                        <td>Expense Category Editor</td>
                         <td>:</td>
-                        <td>{{ $data->incate_editor }}</td>
+                        <td>{{ $data->expcate_editor }}</td>
                       </tr>
                       <tr>
                         <td>Slug</td>
                         <td>:</td>
-                        <td>{{ $data->incate_slug }}</td>
+                        <td>{{ $data->expcate_slug }}</td>
                       </tr>
                       <td>Time</td>
                       <td>:</td>

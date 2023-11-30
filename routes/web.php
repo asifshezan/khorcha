@@ -41,7 +41,7 @@ Route::post('dashboared/user/delete', [UserController::class, 'delete']);
 
 Route::get('dashboard/income/category', [IncomeCategoryController::class, 'index']);
 Route::get('dashboard/income/category/add', [IncomeCategoryController::class, 'add']);
-Route::get('dashboard/income/category/edit', [IncomeCategoryController::class, 'edit']);
+Route::get('dashboard/income/category/edit/{slug}', [IncomeCategoryController::class, 'edit']);
 Route::get('dashboard/income/category/view/{slug}', [IncomeCategoryController::class, 'view']);
 Route::post('dashboard/income/category/submit', [IncomeCategoryController::class, 'insert']);
 Route::post('dashboard/income/category/update', [IncomeCategoryController::class, 'update']);

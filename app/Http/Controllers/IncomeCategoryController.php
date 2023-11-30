@@ -24,8 +24,9 @@ class IncomeCategoryController extends Controller
         return view('admin.income.category.add');
     }
 
-    public function edit(){
-        
+    public function edit($slug){
+        $data = IncomeCategory::where('incate_status',1)->where('incate_slug',$slug)->firstOrFail();
+        return view('admin.income.category.edit', compact('data'));
     }
 
     public function view($slug){
@@ -34,11 +35,19 @@ class IncomeCategoryController extends Controller
     }
 
     public function insert(Request $request){
-        $slug = Str::slug($request['cat_name'],'-');
+        $this->validate($request, [
+            'incate_name' => 'required|max:100|unique:income_categories,incate_name',
+        ], [
+            'incate_name.required' => 'Please enter the income category name.',
+            'incate_name.unique' => 'This category name already been taken.',
+        ]);
+
+
+        $slug = Str::slug($request['incate_name'],'-');
         $creator = Auth::user()->id;
         $insert = IncomeCategory::insert([
-            'incate_name' => $request['cat_name'],
-            'incate_remarks' => $request['cat_remarks'],
+            'incate_name' => $request['incate_name'],
+            'incate_remarks' => $request['incate_remarks'],
             'incate_creator' => $creator,
             'incate_slug' => $slug,
             'created_at' => Carbon::now()->toDateTimeString(),
@@ -51,7 +60,33 @@ class IncomeCategoryController extends Controller
         }
     }
 
-    public function update(){
+    public function update(Request $request){
+        $id = $request['id'];
+        $this-> validate($request, [
+            'incate_name' => 'required|max:100|unique:income_categories,incate_name,'.$id.',incate_id',
+        ], [
+            'incate_name.required' => 'Please enter income category name.',
+            'incate_name.unique' => 'This category name has already been taken.'
+        ]);
+
+        $slug = Str::slug($request['incate_name'], '-');
+        $editor = Auth::user()->id;
+
+        $update = IncomeCategory::where('incate_status',1)->where('incate_id',$id)->update([
+            'incate_name' => $request['incate_name'],
+            'incate_remarks' => $request['incate_remarks'],
+            'incate_editor' => $editor,
+            'incate_slug' => $slug,
+            'updated_at' => Carbon::now()->toDateTimeString()
+        ]);
+
+        if($update){
+            Session::flash('success','value');
+            return redirect('dashboard/income/category/view/'.$slug);
+        }else{
+            Session::flash('error','value');
+            return redirect('dashboard/income/category/edit/'.$slug);
+        }
         
     }
 

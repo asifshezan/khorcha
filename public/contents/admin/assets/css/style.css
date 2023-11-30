@@ -56,3 +56,15 @@ table.custom_view_table tr td:first-child{
     text-align: left;
     width: 69%;
   }
+
+
+  .has-error .form_control{
+    border: 1px solid #ff0000;
+  }
+
+  .has-error .invalid-feedback{
+    color: #ff0000;
+    display: block;
+    font-size: 14px;
+    font-style: italic ;
+  }
