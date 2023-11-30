@@ -16,6 +16,22 @@
 
                 </div>
                 <div class="card-body card_body">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            @if (Session::has('success'))
+                            <div class="alert alert-success" role="alert">
+                                <b>Successfully create income category.</b>
+                              </div> 
+                            @endif
+                            @if (Session::has('error'))
+                            <div class="alert alert-danger" role="alert">
+                                A simple success alert—check it out!
+                              </div>
+                            @endif
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
                     <div class="row mb-3 {{ $errors->has('incate_name') ? 'has-error' : '' }}">
                         <label class="col-3 col-form-label col_form_label">Income Category Name<span class="req_star">*</span>:</label>
                         <div class="col-7">

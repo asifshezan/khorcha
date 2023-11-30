@@ -54,8 +54,10 @@ class IncomeCategoryController extends Controller
         ]);
 
         if($insert){
-            return redirect('dashboard/income/category');
+            Session::flash('success','value');
+            return redirect('dashboard/income/category/add');
         }else{
+            Session::flash('error','value');
             return redirect('dashboard/income/category/add');
         }
     }
