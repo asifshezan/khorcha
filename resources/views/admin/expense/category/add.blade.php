@@ -10,16 +10,36 @@
                     <div class="row">
                         <div class="col-md-8"><h4>Expense Category Information</h4></div>
                         <div class="col-md-4 card_button">
-                            <a href="{{ url('dashboard/income/category')}}" class="btn btn-md btn-dark"><i class="mdi mdi-reorder-horizontal me-1"> All Category</i></a>
+                            <a href="{{ url('dashboard/expense/category')}}" class="btn btn-md btn-dark"><i class="mdi mdi-reorder-horizontal me-1"> All Category</i></a>
                         </div>
                     </div>
-
                 </div>
                 <div class="card-body card_body">
-                    <div class="row mb-3">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            @if (Session::has('success'))
+                            <div class="alert alert-success" role="alert">
+                                {{Session::get('success')}}
+                              </div>
+                            @endif
+                            @if (Session::has('error'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ Session::get('error')}}
+                              </div>
+                              @endif
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="row mb-3 {{ $errors-> has('exp_name') ? 'has-error' : ''}}">
                         <label class="col-3 col-form-label col_form_label">Expense Category Name<span class="req_star">*</span>:</label>
                         <div class="col-7">
                             <input type="text" class="form-control" name="exp_name" placeholder="enter category name">
+                            @if ($errors->has('exp_name'))
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{$errors->first('exp_name')}}</strong>
+                            </span>
+                        @endif
                         </div>
                     </div> 
                     

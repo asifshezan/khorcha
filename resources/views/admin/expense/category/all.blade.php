@@ -29,7 +29,7 @@
                         <tr>
                             <td>{{ $data-> expcate_name }}</td>
                             <td>{{ $data-> expcate_remarks }}</td>
-                            <td>{{ $data-> creatorInfo-> name }}</td>
+                            <td>{{ $data-> creatorrInfo-> name }}</td>
                             <td>{{ $data-> expcate_editor }}</td>
                             <td>{{ $data-> expcate_slug }}</td>
                             <td>
@@ -37,7 +37,7 @@
                                 <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage</button>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="{{url('dashboard/expense/category/view/'.$data->expcate_slug)}}">View</a>
-                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="{{url('dashboard/expense/category/edit/'.$data->expcate_slug)}}">Edit</a>
                                         <a class="dropdown-item" href="#">delete</a>
                                     </div>
                             </td>

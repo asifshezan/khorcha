@@ -48,7 +48,7 @@
                     </div>                          
                 </div> <!-- end card body-->
                 <div class="card-footer card_footer text-center">
-                    <button type="submit" class="btn btn-md btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-md btn-primary">Update</button>
                 </div>
             </div> <!-- end card -->
         </form>

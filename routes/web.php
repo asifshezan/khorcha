@@ -52,17 +52,12 @@ Route::get('dashboard/income/category/delete', [IncomeCategoryController::class,
 
 Route::get('dashboard/expense/category', [ExpenseCategoryController::class, 'index']);
 Route::get('dashboard/expense/category/add', [ExpenseCategoryController::class, 'add']);
-Route::get('dashboard/expense/category/edit', [ExpenseCategoryController::class, 'edit']);
+Route::get('dashboard/expense/category/edit/{slug}', [ExpenseCategoryController::class, 'edit']);
 Route::get('dashboard/expense/category/view/{slug}', [ExpenseCategoryController::class, 'view']);
 Route::post('dashboard/expense/category/submit', [ExpenseCategoryController::class, 'insert']);
 Route::post('dashboard/expense/category/update', [ExpenseCategoryController::class, 'update']);
 Route::post('dashboard/expense/category/softdelete', [ExpenseCategoryController::class, 'softdelete']);
 Route::post('dashboard/expense/category/delete', [ExpenseCategoryController::class, 'delete']);
-
-
-
-
-
 
 
 

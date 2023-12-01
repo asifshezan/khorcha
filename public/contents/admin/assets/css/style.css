@@ -68,3 +68,7 @@ table.custom_view_table tr td:first-child{
     font-size: 14px;
     font-style: italic ;
   }
+
+  .card_button_part{
+    text-align: right;
+  }

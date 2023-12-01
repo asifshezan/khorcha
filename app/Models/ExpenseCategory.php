@@ -10,7 +10,7 @@ class ExpenseCategory extends Model
     use HasFactory;
 
 
-    public function creatorInfo(){
-        return $this->belongsTo('App\Models\User', 'expcate_id', 'id');
+    public function creatorrInfo(){
+        return $this->belongsTo('App\Models\User', 'expcate_creator', 'id');
     }
 }

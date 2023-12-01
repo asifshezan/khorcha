@@ -30,7 +30,7 @@
                       <tr>
                         <td>Expense Category Creator</td>
                         <td>:</td>
-                        <td>{{ $data->creatorInfo->name }}</td>
+                        <td>{{ $data->creatorrInfo->name }}</td>
                       </tr>
                       <tr>
                         <td>Expense Category Editor</td>
