@@ -34,7 +34,7 @@
                     <div class="row mb-3 {{ $errors-> has('exp_name') ? 'has-error' : ''}}">
                         <label class="col-3 col-form-label col_form_label">Expense Category Name<span class="req_star">*</span>:</label>
                         <div class="col-7">
-                            <input type="text" class="form-control" name="exp_name" placeholder="enter category name">
+                            <input type="text" class="form-control" name="exp_name" placeholder="enter category name" value="{{old('exp_name')}}">
                             @if ($errors->has('exp_name'))
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{$errors->first('exp_name')}}</strong>
@@ -46,7 +46,7 @@
                     <div class="row mb-3">
                         <label class="col-3 col-form-label col_form_label">Expense Category Remarks<span class="req_star">*</span>:</label>
                         <div class="col-7">
-                            <input type="text" class="form-control" name="exp_remarks" placeholder="enter category remarks">
+                            <input type="text" class="form-control" name="exp_remarks" placeholder="enter category remarks" value="{{old('exp_remarks')}}">
                         </div>
                     </div>                          
                 </div> <!-- end card body-->

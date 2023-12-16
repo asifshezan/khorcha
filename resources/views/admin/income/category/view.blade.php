@@ -35,16 +35,30 @@
                       <tr>
                         <td>Income Category Editor</td>
                         <td>:</td>
-                        <td>{{ $data->incate_editor }}</td>
+                        <td>
+                          @if($data->incate_editor!='')
+                          {{ $data->editorInfo->name }}
+                          @endif
+                        </td>
                       </tr>
                       <tr>
                         <td>Slug</td>
                         <td>:</td>
                         <td>{{ $data->incate_slug }}</td>
                       </tr>
-                      <td>Time</td>
+                    <tr>
+                      <td>Created Time</td>
                       <td>:</td>
                       <td>{{ $data->created_at->format('d-m-Y | h:i:s a') }}</td>
+                    </tr>
+                    <tr>
+                      <td>Edited Time</td>
+                      <td>:</td>
+                      <td>
+                        @if($data->updated_at!='')
+                        {{ $data->updated_at->format('d-m-Y | h:i:s a') }}
+                        @endif
+                      </td>
                     </tr>
                     </table>
                   </div>

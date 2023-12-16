@@ -13,4 +13,8 @@ class ExpenseCategory extends Model
     public function creatorrInfo(){
         return $this->belongsTo('App\Models\User', 'expcate_creator', 'id');
     }
+
+    public function editorInfo(){
+        return $this->belongsTo('App\Models\User', 'expcate_creator', 'id');
+    }
 }

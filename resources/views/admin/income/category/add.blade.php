@@ -35,7 +35,7 @@
                     <div class="row mb-3 {{ $errors->has('incate_name') ? 'has-error' : '' }}">
                         <label class="col-3 col-form-label col_form_label">Income Category Name<span class="req_star">*</span>:</label>
                         <div class="col-7">
-                            <input type="text" class="form-control form_control" name="incate_name" placeholder="enter category name">
+                            <input type="text" class="form-control form_control" name="incate_name" placeholder="enter category name" value="{{old('incate_name')}}"> 
                             @if($errors->has('incate_name'))
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $errors->first('incate_name') }}</strong>
@@ -47,7 +47,7 @@
                     <div class="row mb-3">
                         <label class="col-3 col-form-label col_form_label">Income Category Remarks<span class="req_star">*</span>:</label>
                         <div class="col-7">
-                            <input type="text" class="form-control" name="incate_remarks" placeholder="enter category remarks">
+                            <input type="text" class="form-control" name="incate_remarks" placeholder="enter category remarks" value="{{old('incate_remarks')}}">
                         </div>
                     </div>                          
                 </div> <!-- end card body-->
