@@ -16,7 +16,8 @@ class IncomeController extends Controller
    }
 
    public function index(){
-
+    $all = Income::where('income_status',1)->orderBy('income_id','DESC')->get();
+    return view('admin.income.main.all', compact('all'));
    }
 
    public function add(){

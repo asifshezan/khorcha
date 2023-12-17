@@ -16,7 +16,8 @@ class ExpenseController extends Controller
        }
     
        public function index(){
-    
+        $all = Expense::where('expense_status',1)->orderBy('expense_id','DESC')->get();
+        return view('admin.expense.main.all', compact('all'));
        }
     
        public function add(){
