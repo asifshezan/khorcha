@@ -8,3 +8,12 @@ $(document).ready(function(){
         "autoWidth":false,
     });
 });
+
+//datepicker code start
+$(function () {
+    $("#myDate").datepicker({
+      autoclose: true,
+      format:'dd-mm-yyyy',
+      todayHighlight: true
+    });
+  });

@@ -21,7 +21,7 @@ class IncomeController extends Controller
    }
 
    public function add(){
-
+    return view('admin.income.main.add');
    }
 
    public function edit(){
