@@ -29,7 +29,7 @@
                         <tr>
                             <td>{{ $data-> income_date }}</td>
                             <td>{{ $data-> income_title }}</td>
-                            <td>{{ $data-> incate_id}}</td>
+                            <td>{{ $data-> category->incate_name}}</td>
                             <td>{{ $data-> income_amount }}</td>
                             <td>
                                 <!-- Info -->
