@@ -21,7 +21,7 @@ class ExpenseController extends Controller
        }
     
        public function add(){
-    
+        return view('admin.expense.main.add');
        }
     
        public function edit(){

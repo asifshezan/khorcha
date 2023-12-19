@@ -27,7 +27,7 @@
                     <tbody>
                     @foreach($all as $data)
                         <tr>
-                            <td>{{ $data-> income_date }}</td>
+                            <td>{{ date('d-m-Y', strtotime($data->income_date)) }}</td>
                             <td>{{ $data-> income_title }}</td>
                             <td>{{ $data-> category->incate_name}}</td>
                             <td>{{ $data-> income_amount }}</td>

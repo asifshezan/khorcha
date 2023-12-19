@@ -32,7 +32,7 @@
                         <div class="col-md-2"></div>
                     </div>
                     <div class="row mb-3 {{ $errors->has('income_title') ? 'has-error' : '' }}">
-                        <label class="col-3 col-form-label col_form_label">Income title<span class="req_star">*</span>:</label>
+                        <label class="col-3 col-form-label col_form_label">Income Title<span class="req_star">*</span>:</label>
                         <div class="col-7">
                             <input type="text" class="form-control form_control" name="income_title" placeholder="enter title" value="{{old('income_title')}}"> 
                             @if($errors->has('income_title'))
