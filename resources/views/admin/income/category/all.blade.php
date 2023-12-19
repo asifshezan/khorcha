@@ -19,6 +19,7 @@
                         <tr>
                             <th>Category Name</th>
                             <th>Category Remarks</th>
+                            <th>Total Income</th>
                             <th>Category Creator</th>
                             <th>Category Editor</th>
                             <th>Slug</th>
@@ -30,6 +31,13 @@
                         <tr>
                             <td>{{ $data-> incate_name }}</td>
                             <td>{{ $data-> incate_remarks }}</td>
+                            <td>
+                                @php
+                                $cateID=$data->incate_id;
+                                $categoryIncome=App\Models\Income::where('income_status',1)->where('incate_id',$cateID)->sum('income_amount');
+                              @endphp
+                              {{number_format($categoryIncome,2)}}
+                            </td>
                             <td>{{ $data-> creatorInfo-> name }}</td>
                             <td>{{ $data-> incate_editor }}</td>
                             <td>{{ $data-> incate_slug }}</td>
@@ -39,7 +47,7 @@
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="{{url('dashboard/income/category/view/'.$data->incate_slug)}}">View</a>
                                         <a class="dropdown-item" href="{{url('dashboard/income/category/edit/'.$data->incate_slug)}}">Edit</a>
-                                        <a class="dropdown-item" href="#">delete</a>
+                                        <a class="dropdown-item" href="#">Delete</a>
                                     </div>
                             </td>
                         </tr>
