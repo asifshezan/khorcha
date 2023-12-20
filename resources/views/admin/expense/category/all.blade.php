@@ -18,6 +18,7 @@
                         <tr>
                             <th>Expense Category Name</th>
                             <th>Expense Category Remarks</th>
+                            <th>Total Expense</th>
                             <th>Expense Category Creator</th>
                             <th>Expense Category Editor</th>
                             <th>Slug</th>
@@ -29,6 +30,13 @@
                         <tr>
                             <td>{{ $data-> expcate_name }}</td>
                             <td>{{ $data-> expcate_remarks }}</td>
+                            <td>
+                                @php
+                                $cateId = $data->expcate_id;
+                                $totalExpense = App\Models\Expense::where('expense_status',1)->where('expcate_id',$cateId)->sum('expense_amount');
+                                @endphp
+                                {{number_format($totalExpense,2)}}
+                            </td>
                             <td>{{ $data-> creatorrInfo-> name }}</td>
                             <td>{{ $data-> expcate_editor }}</td>
                             <td>{{ $data-> expcate_slug }}</td>

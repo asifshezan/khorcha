@@ -26,7 +26,7 @@
                     <tbody>
                     @foreach($all as $data)
                         <tr>
-                            <td>{{ date('d-m-Y', strtotime($data->expcate_date)) }}</td>
+                            <td>{{ date('d-m-Y', strtotime($data->expense_date)) }}</td>
                             <td>{{ $data-> expense_title }}</td>
                             <td>{{ $data->expense->expcate_name}}</td>
                             <td>{{ $data-> expense_amount }}</td>

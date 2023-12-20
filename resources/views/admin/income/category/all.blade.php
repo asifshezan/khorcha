@@ -33,7 +33,7 @@
                             <td>{{ $data-> incate_remarks }}</td>
                             <td>
                                 @php
-                                $cateID=$data->incate_id;
+                                $cateID = $data->incate_id;
                                 $categoryIncome=App\Models\Income::where('income_status',1)->where('incate_id',$cateID)->sum('income_amount');
                               @endphp
                               {{number_format($categoryIncome,2)}}
