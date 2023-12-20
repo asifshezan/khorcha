@@ -28,7 +28,7 @@
                         <tr>
                             <td>{{ date('d-m-Y', strtotime($data->expcate_date)) }}</td>
                             <td>{{ $data-> expense_title }}</td>
-                            <td>{{ $data-> expcate_id}}</td>
+                            <td>{{ $data->expense->expcate_name}}</td>
                             <td>{{ $data-> expense_amount }}</td>
                             <td>
                                 <!-- Info -->
