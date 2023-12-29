@@ -67,7 +67,7 @@
                             $totalSevings = $totalIncome - $totalExpense;
                         @endphp
                         <h5 class="text-muted fw-normal mt-0" title="Growth">Total Sevings</h5>
-                        <h3 class="mt-3 mb-3">{{ number_format($totalSevings,2)}}</h3>
+                        <h3 class="mt-3 mb-3">{{ number_format($totalSevings,2) }}</h3>
                     </div> <!-- end card-body-->
                 </div> <!-- end card-->
             </div> <!-- end col-->
