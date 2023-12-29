@@ -17,8 +17,8 @@ class IncomeCategorySeeder extends Seeder
     public function run(): void
     {
         DB::table('income_categories')->insert([
-            'incate_name' => 'Job',
-            'incate_remarks' => 'The income from private job',
+            'incate_name' => Str::random(10),
+            'incate_remarks' => Str::random(10),
             'incate_creator' => 1,
             'incate_slug' => 'INC'.Str::random(10),
             'created_at' => Carbon::now()-> toDateTimeString(),
