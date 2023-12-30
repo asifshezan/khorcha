@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             IncomeCategorySeeder::class,
             IncomeSeeder::class,
+            ExpenseSeeder::class,
         ]);
     }
 }
